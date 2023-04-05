@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+  width: 50%;
+  margin: auto;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  margin: .5rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+input,
+textarea {
+  padding: .5rem;
+}
+
+input:focus,
+textarea:focus,
+input:active,
+textarea:active,
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
+
+form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .25rem;
+  color: white;
+  background-color: gray;
+  height: 100%;
+  border: none;
+}
+
+form button:hover {
+  border: .1rem solid black;
+}
+
+ul {
+  text-align: center;
+  padding: 0;
+}
+
+li {
+  background-color: gray;
+  border: .1rem solid white;
+  border-radius: .25rem .1rem;
+  margin: .5rem 0;
+}
+
+li div {
+  position: relative;
+}
+
+li div button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: 0;
+  padding: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+li h2 {
+  background-color: lightslategray;
+  margin: 0;
+  padding: 4px;
+}
+
+li p {
+  margin: 8px;
+}
