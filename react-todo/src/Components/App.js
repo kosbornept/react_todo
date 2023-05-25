@@ -1,11 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+
+const LOCAL_STORAGE_KEY = 'todoApp.tasks'
 
 function App() {
     // Initialise State
     const [newTask, setNewTask] = useState({});
     const [allTasks, setAllTasks] = useState([]);
 
+    // Retrieve Tasks
+    useEffect(() => {
+        const storedTasks = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+        if (storedTasks) setAllTasks(prevTasks => [...prevTasks, ...storedTasks])
+    }, [])
+
+    // Store Tasks
+    useEffect(() => {
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(allTasks))
+    }, [allTasks])
     
     // Get value from input and update task state
     const handleChange = ({ target }) => {
