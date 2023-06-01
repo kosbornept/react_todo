@@ -23,6 +23,7 @@ form {
 input,
 textarea {
   padding: .5rem;
+  width: 88%;
 }
 
 input:focus,
@@ -44,6 +45,7 @@ form button {
   background-color: gray;
   height: 100%;
   border: none;
+  width: 10%;
 }
 
 form button:hover {
@@ -86,4 +88,11 @@ li h2 {
 
 li p {
   margin: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .App {
+    width: 90%;
+  }
 }
