@@ -97,6 +97,16 @@ li p {
   margin: 8px;
 }
 
+.closeBtn {
+  display: none;
+  color: white;
+  background-color: rgb(113, 113, 113);
+}
+
+li:hover .closeBtn {
+  display: block;
+}
+
 @media only screen and (max-width: 768px) {
 
   .App {

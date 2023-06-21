@@ -38,6 +38,9 @@ function App() {
         setAllTasks((prev) => prev.filter((task) => task.id !== taskId));
     }
 
+    // Hover Close Visibility
+
+
     return (
         <div className="App">
             <h1>Task List</h1>
@@ -65,7 +68,7 @@ function App() {
                     <li key={id}>
                         <div>
                             <h2>{title}</h2>
-                            <button onClick={() => handleDelete(id)}>X</button>
+                            <button className='closeBtn' onClick={() => handleDelete(id)}>X</button>
                         </div>
                         {!description ? null : <p>{description}</p>}
                     </li>
